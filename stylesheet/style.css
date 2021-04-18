@@ -40,7 +40,7 @@ body {
   position: relative;
   background: #fff;
   border-radius: 4px;
-  height: 900px;
+  height: 1200px;
 }
 .sidebar {
   background: #fff;
@@ -256,7 +256,7 @@ body {
 /* PAGE Home STYLING */
 .section-page-1 {
   display: grid;
-  grid-template-columns: repeat(5, 11rem);
+  grid-template-columns: repeat(4, 11rem);
   grid-template-rows: repeat(3, auto);
   grid-gap: 5rem;
 }
