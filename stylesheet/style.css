@@ -34,24 +34,25 @@ body {
   display: grid;
   grid-template-columns: 75% 20%;
   justify-content: space-between;
-  overflow-x: hidden;
 }
 .page {
   position: relative;
   background: #fff;
   border-radius: 4px;
   height: 900px;
+  overflow: hidden;
 }
 .sidebar {
   background: #fff;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   height: 900px;
+  overflow: scroll;
 }
 
 body {
   background: rgb(243, 243, 243);
-  overflow-x: hidden;
+  overflow-x: scroll;
 }
 .logo {
   color: #79bdac;
@@ -84,7 +85,7 @@ body {
   color: rgb(65, 65, 65);
   font-weight: 500;
   transition: all 200ms linear;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 .sidebar-url-icon {
   height: 100%;
@@ -145,13 +146,14 @@ body {
     right: 0;
     transition: all 300ms ease-in-out;
   }
-}
-@media all and (min-width: 540px) and (max-width: 1400px) {
+} */
+
+/* @media all and (max-width: 1400px) {
   .logo {
     font-size: 2.8rem;
   }
   .sidebar-url {
-    margin-left: 25px;
+    margin-left: 35px;
     font-size: 1.3rem;
   }
 } */
@@ -256,9 +258,11 @@ body {
 /* PAGE Home STYLING */
 .section-page-1 {
   display: grid;
-  grid-template-columns: repeat(5, 11rem);
-  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(auto-fit, 11rem);
+  /* grid-template-rows: repeat(3, auto); */
+  grid-template-rows: repeat(auto-fit, 11rem);
   grid-gap: 5rem;
+  overflow: scroll;
 }
 /* PAGE Storage STYLING */
 .section-page-6 {
@@ -266,6 +270,7 @@ body {
   grid-template-columns: repeat(5, 11rem);
   grid-template-rows: repeat(3, auto);
   grid-gap: 5rem;
+  overflow: scroll;
 }
 /* Page Hex Styling */
 

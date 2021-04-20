@@ -399,3 +399,20 @@ pickr.on("change", (color) => {
   let b = colorarray[2];
   div.style.backgroundColor = `#${r}${g}${b}`;
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  let page1 = document.getElementById("page-1");
+  let page2 = document.getElementById("page-2");
+  let page3 = document.getElementById("page-3");
+  let page4 = document.getElementById("page-4");
+  let page5 = document.getElementById("page-6");
+  let page = document.getElementById("page");
+  page1.style.height = "fit-content";
+  let page1height = page1.clientHeight + parseInt(100) + "px";
+  page1.style.height = page1height;
+  page2.style.height = page1height;
+  page3.style.height = page1height;
+  page4.style.height = page1height;
+  page5.style.height = page1height;
+  page.style.height = page1height;
+});
