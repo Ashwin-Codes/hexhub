@@ -8,3 +8,5 @@ Features :
 TODO:
 1) Rewrite the whole app with React-js.
 2) Add a tab where user can generate color pallets with just a word.
+
+You can check out the project at : https://hexhub.netlify.app
