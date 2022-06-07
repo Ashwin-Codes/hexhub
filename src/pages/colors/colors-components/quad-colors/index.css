@@ -1,0 +1,95 @@
+.quad-colors {
+  width: 50rem;
+  scroll-behavior: smooth;
+  animation-name: trans;
+  animation-duration: 300ms;
+}
+
+.quad-colors-clr1 {
+  height: 5rem;
+  margin-right: 1rem;
+  margin-top: 0.75rem;
+  border-radius: 20px;
+  position: relative;
+}
+.quad-colors-clr2 {
+  height: 5rem;
+  margin-right: 1rem;
+  margin-top: 0.75rem;
+  border-radius: 20px;
+  position: relative;
+}
+
+.quad-colors-first {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr;
+  cursor: pointer;
+}
+
+.quad-colors-second {
+  display: grid;
+  grid-template-columns: 1fr 2.2fr;
+  cursor: pointer;
+}
+
+.quad-colors-overlay-long {
+  background-color: #f0f2f6;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  border-radius: 18px;
+  width: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  font-size: 2rem;
+  transition: all linear 100ms;
+  cursor: pointer;
+}
+
+.quad-colors-overlay-short {
+  background-color: #f0f2f6;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  border-radius: 18px;
+  width: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 2rem;
+  transition: all linear 100ms;
+  cursor: pointer;
+}
+
+.quad-colors-icons {
+  color: #dd707c;
+  transition: all linear 100ms;
+}
+
+.quad-colors-icons:hover {
+  transform: scale(1.2);
+}
+
+.quad-colors-clr1:hover .quad-colors-overlay-long {
+  width: 40%;
+}
+
+.quad-colors-clr2:hover .quad-colors-overlay-short {
+  width: 50%;
+}
+
+.random-colors-container-foot {
+  margin-top: 12rem;
+}
+
+@keyframes trans {
+  from {
+    transform: translateX(1000%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}

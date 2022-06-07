@@ -1,0 +1,9 @@
+.searched-color-pallet-container {
+  margin-top: 2rem;
+}
+.searched-color-pallet-container-headings {
+  color: rgb(140, 140, 140);
+  padding: 0.5rem 0rem;
+  border-bottom: 2px solid black;
+  margin-top: 3rem;
+}

@@ -1,0 +1,25 @@
+.searchbar-container {
+}
+
+.searchbar-form {
+  width: 25rem;
+  border: 1px #e2e3e5 solid;
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+  display: flex;
+  gap: 1rem;
+}
+
+.searchbar-icon {
+  color: #dd707c;
+  transform: rotateY(180deg);
+  font-size: 2rem;
+}
+
+.searchbar-input {
+  outline: none;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  width: 100%;
+  border: none;
+}
