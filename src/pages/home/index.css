@@ -5,3 +5,15 @@
   border-bottom: 2px #9f9f9f solid;
   padding-bottom: 0.5rem;
 }
+
+@media only screen and (max-width: 800px) {
+  .home-results-heading {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .home-results-heading {
+    font-size: 1.1rem;
+  }
+}

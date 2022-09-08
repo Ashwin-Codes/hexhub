@@ -7,7 +7,7 @@
   position: sticky;
   top: 1rem;
   height: 95vh;
-  min-width: 12rem;
+  min-width: 10rem;
   margin: 1rem;
   border-radius: 15px;
   background-color: #343179;
@@ -16,6 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 20;
 }
 
 .sidebar {
@@ -41,6 +42,7 @@
   justify-content: center;
   color: white;
 }
+
 .sidebar-link-active {
   color: #dd707c;
 }
@@ -62,10 +64,12 @@
 }
 
 .app-main {
+  position: relative;
   margin-top: 1rem;
   margin-left: 5rem;
   margin-right: 2rem;
   width: 70%;
+  z-index: 10;
 }
 
 .hidden {
@@ -77,4 +81,79 @@
 }
 
 @media screen and (max-width: 800px) {
+  .sidebar-container {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    transform: translateY(-100%);
+    height: 4rem;
+    max-width: 100vw;
+    width: 100%;
+    margin: 0;
+    background-color: #343179;
+    border-radius: 0;
+    /* center sidebar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sidebar {
+    border-radius: 0;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar-links {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .sidebar-link {
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+    margin-bottom: 0rem;
+    justify-content: unset;
+  }
+
+  .sidebar-link:hover .sidebar-navigation-link-name {
+    display: none;
+  }
+
+  .sidebar-link:hover .navlinks-icon {
+    display: unset;
+  }
+
+  .placeholder {
+    display: none;
+  }
+
+  .sidebar-logo {
+    display: none;
+  }
+
+  .app-container {
+    padding: 0;
+  }
+
+  /* Adjust Global Positioning */
+
+  .app-main {
+    /* background-color: antiquewhite; */
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    width: calc(100% - 4rem);
+    z-index: 10;
+  }
 }
