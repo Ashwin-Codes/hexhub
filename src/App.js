@@ -9,6 +9,7 @@ import { ToastContainer } from 'react-toastify';
 // Pages
 import Home from './pages/home';
 import Colors from './pages/colors';
+import SavedColors from './pages/saved-colors';
 
 // Components
 import Sidebar from './components/sidebar';
@@ -27,6 +28,7 @@ function App() {
             <Route path="/" element={<Navigate replace to="/home" />} />
             <Route path="/home" element={<Home />} />
             <Route path="/colors" element={<Colors />} />
+            <Route path="/saved-colors" element={<SavedColors />} />
           </Routes>
         </Sidebar>
       </BrowserRouter>

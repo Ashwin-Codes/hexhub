@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import { SiHexo as Logo } from 'react-icons/si';
 import { BiHomeAlt as HomeNavLogo } from 'react-icons/bi';
 import { MdOutlineDashboard as ColorsNavLogo } from 'react-icons/md';
+import { AiOutlineHeart as SavedColorsNavLogo } from 'react-icons/ai';
 
 export default function Sidebar({ children }) {
   const links = [
@@ -17,6 +18,11 @@ export default function Sidebar({ children }) {
       path: '/colors',
       name: 'Colors',
       icon: <ColorsNavLogo className="navlinks-icon" />,
+    },
+    {
+      path: '/saved-colors',
+      name: 'Saved',
+      icon: <SavedColorsNavLogo className="navlinks-icon" />,
     },
   ];
 

@@ -12,7 +12,7 @@ import LoadingModal from '../../components/loadingModal/index';
 import useLocalStorage from '../../hooks/useLocalStorage';
 
 export default function home() {
-  const [searchTerm, setSearchTerm] = useState('Tree');
+  const [searchTerm, setSearchTerm] = useState('Amsterdam');
   const [loading, setLoading] = useState(false);
   const [pallete, setPallete] = useState([]);
   const { getItem, setItem, searchItem } = useLocalStorage();
