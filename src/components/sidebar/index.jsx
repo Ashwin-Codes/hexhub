@@ -10,14 +10,14 @@ import { AiOutlineHeart as SavedColorsNavLogo } from 'react-icons/ai';
 export default function Sidebar({ children }) {
   const links = [
     {
-      path: '/home',
-      name: 'Home',
-      icon: <HomeNavLogo className="navlinks-icon" />,
-    },
-    {
       path: '/colors',
       name: 'Colors',
       icon: <ColorsNavLogo className="navlinks-icon" />,
+    },
+    {
+      path: '/home',
+      name: 'Home',
+      icon: <HomeNavLogo className="navlinks-icon" />,
     },
     {
       path: '/saved-colors',

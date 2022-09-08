@@ -10,7 +10,7 @@
   min-width: 10rem;
   margin: 1rem;
   border-radius: 15px;
-  background-color: #343179;
+  background-color: var(--sidebar-background);
 
   /* center sidebar */
   display: flex;
@@ -29,7 +29,7 @@
 }
 
 .sidebar-logo {
-  color: #dd707c;
+  color: var(--logo);
   font-size: 2.5rem;
 }
 
@@ -40,11 +40,13 @@
   margin-bottom: 1rem;
   text-decoration: none;
   justify-content: center;
-  color: white;
+  color: var(--sidebar-link);
+  transition: all linear 80ms;
 }
 
 .sidebar-link-active {
-  color: #dd707c;
+  color: var(--active-link);
+  font-size: 2rem;
 }
 
 .navlinks-icon {
@@ -80,7 +82,7 @@
   visibility: hidden;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 880px) {
   .sidebar-container {
     position: fixed;
     top: 100%;
@@ -90,12 +92,7 @@
     max-width: 100vw;
     width: 100%;
     margin: 0;
-    background-color: #343179;
     border-radius: 0;
-    /* center sidebar */
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .sidebar {
@@ -114,7 +111,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap: 2rem;
+    gap: 10rem;
   }
 
   .sidebar-link {
@@ -146,14 +143,50 @@
   }
 
   /* Adjust Global Positioning */
-
   .app-main {
-    /* background-color: antiquewhite; */
     margin-top: 1rem;
     margin-left: 2rem;
     margin-right: 2rem;
     margin-bottom: 2rem;
     width: calc(100% - 4rem);
     z-index: 10;
+  }
+
+  /* Sidebar UI */
+  .sidebar-link-active {
+    background-color: var(--sidebar-background);
+    border-radius: 50%;
+    transform: translateY(-50%) scale(1.4);
+  }
+
+  .sidebar-link-active::before {
+    content: '';
+    position: absolute;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: var(--sidebar-background);
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    transform: scale(2);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar-links {
+    gap: 6rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .sidebar-links {
+    gap: 3rem;
+  }
+  .sidebar-link-active {
+    transform: translateY(-50%) scale(1.2);
+  }
+  .sidebar-link-active::before {
+    transform: scale(1.8);
   }
 }

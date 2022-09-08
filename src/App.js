@@ -29,6 +29,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/colors" element={<Colors />} />
             <Route path="/saved-colors" element={<SavedColors />} />
+            <Route path="/*" element={<Navigate replace to="/home" />} />
           </Routes>
         </Sidebar>
       </BrowserRouter>

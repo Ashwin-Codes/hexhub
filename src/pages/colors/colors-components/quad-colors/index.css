@@ -1,8 +1,9 @@
 .quad-colors {
-  width: 50rem;
+  width: 55rem;
   scroll-behavior: smooth;
   animation-name: trans;
   animation-duration: 300ms;
+  max-width: 100%;
 }
 
 .quad-colors-clr1 {
@@ -12,6 +13,7 @@
   border-radius: 20px;
   position: relative;
 }
+
 .quad-colors-clr2 {
   height: 5rem;
   margin-right: 1rem;
@@ -91,5 +93,80 @@
   }
   to {
     transform: translateX(0%);
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .quad-colors-clr1 {
+    height: 4rem;
+    margin-right: 0.5rem;
+    border-radius: 15px;
+  }
+  .quad-colors-clr2 {
+    height: 4rem;
+    margin-right: 0.5rem;
+    border-radius: 15px;
+  }
+  .quad-colors-overlay-long {
+    border-radius: 15px;
+  }
+  .quad-colors-overlay-short {
+    border-radius: 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .quad-colors-clr1 {
+    height: 3rem;
+    margin-right: 0.5rem;
+    border-radius: 15px;
+  }
+  .quad-colors-clr2 {
+    height: 3rem;
+    margin-right: 0.5rem;
+    border-radius: 15px;
+  }
+
+  .quad-colors-first {
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+  .quad-colors-second {
+    grid-template-columns: 1fr 1.5fr;
+  }
+
+  .quad-colors-overlay-long {
+    gap: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .quad-colors-overlay-short {
+    gap: 0.75rem;
+    font-size: 1.5rem;
+  }
+  .quad-colors-clr2:hover .quad-colors-overlay-short {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .quad-colors-overlay-long {
+    gap: 1rem;
+    font-size: 1.25rem;
+  }
+  .quad-colors-overlay-short {
+    gap: 0.4rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .quad-colors-overlay-long {
+    gap: 0.75rem;
+    font-size: 1.25rem;
+  }
+  .quad-colors-overlay-short {
+    gap: 0.3rem;
+    font-size: 1.2rem;
   }
 }

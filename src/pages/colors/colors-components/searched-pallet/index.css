@@ -7,3 +7,9 @@
   border-bottom: 2px solid black;
   margin-top: 3rem;
 }
+
+@media screen and (max-width: 880px) {
+  .searched-color-pallet-container {
+    margin-bottom: 3rem;
+  }
+}

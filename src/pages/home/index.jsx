@@ -29,7 +29,14 @@ export default function home() {
     setLoading(true);
 
     const body = { query: searchTerm };
-    const res = await fetch('http://localhost:5000/api/queryToHex', {
+    let URL = '/api/queryToHex';
+
+    // Change URL if developement
+    if (process.env.NODE_ENV === 'development') {
+      URL = 'http://localhost:5000/api/queryToHex';
+    }
+
+    const res = await fetch(URL, {
       method: 'POST',
       body: JSON.stringify(body),
       headers: {

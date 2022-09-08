@@ -6,19 +6,20 @@ const config = require('./config.json');
 
 // Cors
 const cors = require('cors');
+
+// Route imports
+const queryToHexRoute = require('./routes/queryToHexRoute');
+
 app.use(
   cors({
     origin: config.allowed_origins,
   }),
 );
 
+app.use(express.json());
+
 // Port
 const port = config.port;
-
-// Route imports
-const queryToHexRoute = require('./routes/queryToHexRoute');
-
-app.use(express.json());
 
 app.use('/api', queryToHexRoute);
 
