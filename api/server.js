@@ -1,14 +1,12 @@
 const express = require('express');
-const app = express();
+const cors = require('cors');
+const path = require('path');
 
-// Config
+// Imports
+const queryToHexRoute = require('./routes/queryToHexRoute');
 const config = require('./config.json');
 
-// Cors
-const cors = require('cors');
-
-// Route imports
-const queryToHexRoute = require('./routes/queryToHexRoute');
+const app = express();
 
 app.use(
   cors({
@@ -21,7 +19,15 @@ app.use(express.json());
 // Port
 const port = config.port;
 
+// Routes
 app.use('/api', queryToHexRoute);
+
+// Serving frontend
+app.use(express.static(path.resolve(__dirname, '..', 'build')));
+
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../build/index.html'));
+});
 
 app.listen(port, () => {
   console.log(`server running on ${port}`);

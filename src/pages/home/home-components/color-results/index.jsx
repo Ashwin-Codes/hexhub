@@ -11,7 +11,11 @@ import { toast } from 'react-toastify';
 export default function index({ colorPallete }) {
   useEffect(() => {
     const clip = new ClipboardJS('.colors-results-pallete-hex');
-    toast.info('🙃 Click color to copy hex !');
+    if (!toast.isActive('UX info')) {
+      toast('Click on color to copy hex', {
+        toastId: 'UX info',
+      });
+    }
     return () => {
       clip.destroy();
     };
@@ -40,7 +44,11 @@ export default function index({ colorPallete }) {
                     <div
                       key={`${hex}+${Math.floor(Math.random() * 10)}`}
                       onClick={() => {
-                        toast('Copied Hex !');
+                        if (!toast.isActive('copy')) {
+                          toast('Hex Copied', {
+                            toastId: 'copy',
+                          });
+                        }
                       }}
                       onKeyUp={() => {}}
                       data-clipboard-text={hex}

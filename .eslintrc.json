@@ -16,15 +16,16 @@
     "sourceType": "module"
   },
   "plugins": ["react", "prettier"],
+
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "no-unused-vars": "warn",
     "jsx-a11y/no-static-element-interactions": "off",
     "jsx-no-bind": "off",
     "no-plusplus": "off",
     "react/jsx-no-bind": "off",
-    "jsx-a11y/click-events-have-key-events": "off"
+    "jsx-a11y/click-events-have-key-events": "off",
+    "react/react-in-jsx-scope": "off"
   }
 }

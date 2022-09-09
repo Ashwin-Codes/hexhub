@@ -21,7 +21,11 @@ export default function longColorBox({ clr }) {
           className="quad-colors-icons quad-colors-overlay-copy"
           data-clipboard-text={clr}
           onClick={() => {
-            toast('Hex Copied !');
+            if (!toast.isActive('copy')) {
+              toast('Hex Copied', {
+                toastId: 'copy',
+              });
+            }
           }}
         />
         {liked && (
@@ -31,7 +35,6 @@ export default function longColorBox({ clr }) {
             onClick={() => {
               setLiked(!liked);
               likeHandler(clr, liked);
-              toast('Saved Color');
             }}
           />
         )}
@@ -42,7 +45,6 @@ export default function longColorBox({ clr }) {
             onClick={() => {
               setLiked(!liked);
               likeHandler(clr, liked);
-              toast('Saved Color');
             }}
           />
         )}

@@ -16,14 +16,22 @@ export default function index({ color, heartOnClick }) {
           className="single-saved-color-overlay-delete"
           onClick={() => {
             heartOnClick();
-            toast('Deleted Color ! 👍');
+            if (!toast.isActive('delete')) {
+              toast('Color Deleted', {
+                toastId: 'delete',
+              });
+            }
           }}
         />
         <Copy
           className="single-saved-color-overlay-copy"
           data-clipboard-text={color}
           onClick={() => {
-            toast('Copied Hex ! 👍');
+            if (!toast.isActive('copy')) {
+              toast('Hex Copied', {
+                toastId: 'copy',
+              });
+            }
           }}
         />
       </div>

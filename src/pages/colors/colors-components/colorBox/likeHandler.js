@@ -15,11 +15,17 @@ export default function likeHandler(clr, dislike = false) {
       return !(chroma(clr).hex() === ele);
     });
     setItem('liked__colors', JSON.stringify([...filteredItems]));
+
+    if (!toast.isActive('delete')) {
+      toast('Color Deleted !', {
+        toastId: 'delete',
+      });
+    }
+
     return;
   }
 
   //   Like
-
   if (!searchItem('liked__colors')) {
     setItem('liked__colors', JSON.stringify([chroma(clr).hex()]));
     return;
@@ -29,5 +35,9 @@ export default function likeHandler(clr, dislike = false) {
   if (allItems.includes(chroma(clr).hex())) return;
 
   appendItem('liked__colors', chroma(clr).hex());
-  toast('Color Saved !');
+  if (!toast.isActive('like')) {
+    toast('Color Saved', {
+      toastId: 'like',
+    });
+  }
 }

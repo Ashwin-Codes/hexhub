@@ -45,3 +45,58 @@
   font-size: 1.5rem;
   transform: scale(1.2);
 }
+
+@media screen and (max-width: 980px) {
+  .single-saved-color {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+  }
+  .single-saved-color-overlay {
+    height: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .single-saved-color {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+  }
+  .single-saved-color-overlay {
+    height: 2rem;
+  }
+
+  .single-saved-color-overlay-delete {
+    font-size: 1.1rem;
+  }
+
+  .single-saved-color-overlay-copy {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .single-saved-color {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+  }
+  .single-saved-color-overlay {
+    height: 1.7rem;
+  }
+
+  .single-saved-color-overlay-delete {
+    font-size: 1.1rem;
+  }
+
+  .single-saved-color-overlay-copy {
+    font-size: 1.3rem;
+  }
+}
