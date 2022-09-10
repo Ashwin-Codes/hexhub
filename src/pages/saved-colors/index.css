@@ -1,0 +1,41 @@
+.saved-colors-container-heading {
+  color: #9f9f9f;
+  font-size: 1.5rem;
+  border-bottom: 2px #9f9f9f solid;
+  padding-bottom: 0.5rem;
+}
+
+.saved-colors-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.saved-colors-no-file {
+  margin-top: 3rem;
+  color: #9f9f9f;
+  font-size: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .saved-colors-no-file {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .saved-colors-no-file {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .saved-colors-no-file {
+    font-size: 1.1rem;
+  }
+}

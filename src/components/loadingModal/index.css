@@ -1,0 +1,34 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backdrop-modal {
+  background-color: white;
+  width: 20rem;
+  height: 15rem;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.backdrop-modal-text {
+  margin-top: 1rem;
+  color: rgb(160, 160, 160);
+  text-transform: capitalize;
+}
+
+.backdrop-modal-emoji {
+  font-size: 8rem;
+}
