@@ -44,6 +44,11 @@ export default function index({
 
     // Callback Function
     searchTermHandler(textValue);
+
+    // Close keyboard on phone after submit
+    setTimeout(() => {
+      inputRef.current.blur();
+    }, 100);
   }
 
   return (

@@ -26,7 +26,8 @@ app.use('/api', queryToHexRoute);
 app.use(express.static(path.resolve(__dirname, '..', 'build')));
 
 app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../build/index.html'));
+  console.log(req.url);
+  res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
 });
 
 app.listen(port, () => {
